@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+    <title>Ciclos</title>
+</head>
+<center><body>
+    <p class="titulo">Ciclos</p>
+    <table border="3" width="70%">
+        <form name="cycle_form">
+            <tr>
+                <td><p>Indica el valor de X entre 1 y 10</p></td>
+                <td><input type="number" name="valueX" class="field" onclick="resetFieldX(valueX)"></td>
+            </tr>
+            <tr>
+                <td><p>Indica el valor de Y entre 1 y 5</p></td>
+                <td><input type="number" name="valueY" class="field" onclick="resetFieldY()"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="text" class="field" name="res" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" name="exec_button" id="but1" class="button" value="Ejecutar" onclick="execute()"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="reset" name="reset_button" id="but2" class="button" value="Resetear" style="background-color: red;"></td>
+            </tr>
+        </form>
+    </table>
+</body></center>
+</html>
