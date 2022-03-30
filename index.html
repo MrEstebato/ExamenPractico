@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="script.js"></script>
-    <title>Ciclos</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Generador de correos</title>
 </head>
-<center><body>
-    <p class="titulo">Ciclos</p>
-    <table border="3" width="70%">
-        <form name="cycle_form">
+<body>
+    <center>
+        <h1>Obtener cuenta de correo de un empleado</h1>
+    </center>
+    <form name="main">
+        <center><table border="1px" width="50%">
             <tr>
-                <td><p>Indica el valor de X entre 1 y 10</p></td>
-                <td><input type="number" name="valueX" class="field" onclick="resetFieldX(valueX)"></td>
+                <td>Indica el nombre de la persona</td>
+                <td align="center"><input type="text" name="userName" onclick="setNameDefault()" class="editableField"></td>
             </tr>
             <tr>
-                <td><p>Indica el valor de Y entre 1 y 5</p></td>
-                <td><input type="number" name="valueY" class="field" onclick="resetFieldY()"></td>
+                <td>Indica el apellido paterno de la persona</td>
+                <td align="center"><input type="text" name="lastName1" onclick="setln1Default()" class="editableField"></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><input type="text" class="field" name="res" readonly></td>
+                <td>Indica el apellido materno de la persona</td>
+                <td align="center"><input type="text" name="lastName2" onclick="setln2Default()" class="editableField"></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><input type="button" name="exec_button" id="but1" class="button" value="Ejecutar" onclick="execute()"></td>
+                <td>Indica la fecha de nacimiento de la persona</td>
+                <td align="center"><input type="date" name="birthday" onclick="setbdDefault()" class="editableField"></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><input type="reset" name="reset_button" id="but2" class="button" value="Resetear" style="background-color: red;"></td>
+                <td>La cuenta de correo resultante es:</td>
+                <td align="center"><input type="text" readonly name="mailResult" class="nonEditableField"></td>
             </tr>
-        </form>
-    </table>
-</body></center>
+            <tr>
+                <td>La contraseña resultante es:</td>
+                <td align="center"><input type="text" readonly name="passwordResult" id="passwd" style="background: bisque;"></td>
+            </tr>
+            <tr align="center">
+                <td><input type="button" name="execute" value="Ejecutar" onclick="generate()"></td>
+                <td><input type="reset" name="reset" onclick="passReset()"></td>
+            </tr>
+        </table></center>
+    </form>
+</body>
 </html>
